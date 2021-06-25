@@ -23,6 +23,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    post = Post.find(panrams[:id])
+    post.destroy!
+    redirect_to root_path
   end
 
   private
